@@ -1,4 +1,5 @@
 import {Link} from "react-router-dom";
+import SearchBox from "./SearchBox";
 
 const Header = () => {
   return (
@@ -9,6 +10,7 @@ const Header = () => {
       </div>
       <div className="nav__container--right">
       <Link className="nav__text--right" to ="/category">Category</Link>
+      <SearchBox />
       <Link className="nav__text--right" to ="/login">Login</Link>
       </div>
     </nav>
