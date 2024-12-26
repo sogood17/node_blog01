@@ -2,11 +2,17 @@ import {Link} from "react-router-dom";
 
 const Header = () => {
   return (
-    <nav>
+    <div className="header__container">
+    <nav className="nav__container">
+        <div className="nav__container--left">
       <Link to ="/">Violet's Blog</Link>
-      <Link to ="/category">Category</Link>
-      <Link to ="/login">Login</Link>
+      </div>
+      <div className="nav__container--right">
+      <Link className="nav__text--right" to ="/category">Category</Link>
+      <Link className="nav__text--right" to ="/login">Login</Link>
+      </div>
     </nav>
+    </div>
   )
 }
 

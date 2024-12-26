@@ -1,5 +1,5 @@
 import RootRouter from './routes/RootRouter';
-import './App.css';
+import "./CSS/NavBar.css"
 
 function App() {
   return (
