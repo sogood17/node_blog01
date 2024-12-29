@@ -1,0 +1,19 @@
+.list__container {
+  margin: 100px;
+  width: 330px;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+}
+
+.title__text {
+  color:var(--basic-font-color);
+  font-weight: 500;
+  height: 26px;
+}
+
+.content__text {
+  color:var(--light-font-color);
+  height: 26px;
+}
