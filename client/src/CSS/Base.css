@@ -1,0 +1,31 @@
+
+:root {
+  --primary-color: #C1B0FF;
+  --secondary-color: #CFC2FF;
+  --light-gray-color: #CDCDCD;
+  --dark-gray-color: #888888;
+  --basic-font-color: #363636;
+  --light-font-color: #888888;
+  --light-background-color: #F6EFFF;
+  --dark-background-color: #C1B0FF;
+  --white-color: #ffffff;
+  --black-color: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  font-family:Arial, Helvetica, sans-serif;
+  color: var(--basic-font-color);
+  background-color: var(--light-background-color);
+}
+
+a {
+  color: var(--basic-font-color);
+  text-decoration: none;
+}
