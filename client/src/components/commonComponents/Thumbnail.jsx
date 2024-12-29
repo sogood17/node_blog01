@@ -1,3 +1,5 @@
+import "./Thumbnail.css";
+
 const Thumbnail = () => {
   return (
     <div className="thumbnail__container">

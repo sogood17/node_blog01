@@ -1,5 +1,5 @@
 
-import Thumbnail from "./Thumbnail";
+import Thumbnail from "../commonComponents/Thumbnail";
 
 const List = () => {
   return (
