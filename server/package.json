@@ -1,4 +1,13 @@
 {
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "violet_blog",
+  "version": "1.0.0",
+  "description": "violet_blog for portfolio",
+  "main": "server.js",
+  "author": "violet",
+  "license": "ISC",
   "dependencies": {
     "express": "^4.21.2"
   }
