@@ -1,11 +1,12 @@
 {
-  "scripts": {
-    "start": "node server.js"
-  },
   "name": "violet_blog",
   "version": "1.0.0",
   "description": "violet_blog for portfolio",
   "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
   "author": "violet",
   "license": "ISC",
   "dependencies": {
