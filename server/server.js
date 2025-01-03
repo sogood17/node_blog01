@@ -2,11 +2,12 @@ const express = require("express");
 
 const app = express();
 
-const port = process.env.PORT || 5000;
+const port=process.env.PORT || 5000;
+
+const dbConnect = require("./config/dbConnect");
 
 app.use(express.json());
-app.use(express.urlencoded({extended: false}));
-
+app.use(express.urlencoded( { extended : true }));
 
 app.get('/', (req, res) => {
   res.send('Hello!');
@@ -20,6 +21,8 @@ app.get('/', (req, res) => {
 //   res.send('login')
 // })
 
+dbConnect();
+  
 app.listen(port, () => {
-  console.log("Server is running at "+port);
+  console.log("Server is running at "+ port);
 })
