@@ -10,12 +10,43 @@ exports.getAllPosts = async (req, res) => {
   }
 }
 
-//create post
+// create post
 exports.createPost = async (req, res) => {
   try {
-    const post = await postService.createPost(req.body);
+    const newPost = await postService.createPost(req.body);
+    res.status(200).json(newPost);
+  } catch (err) {
+    res.status(400).json({message : err.message});
+  }
+}
+
+// get post by id
+exports.getPost = async (req, res) => {
+  try {
+    const post = await postService.getPost(req.params.id);
     res.status(200).json(post);
   } catch (err) {
     res.status(500).json({message : err.message});
+  }
+}
+
+// update post by id
+exports.updatePost = async (req, res) => {
+  try {
+    const updatedPost = await postService.updatePost(req.params.id, req.body);
+    res.status(200).json(updatedPost);
+  } catch {
+    res.status(400).json({message : err.message})
+  }
+}
+
+
+// delete post by id
+exports.deletePost = async (req, res) => {
+  try {
+    const deletedPost = await postService.deletePost(id);
+    res.status(200).json({message : "delete success"});
+  } catch (err) {
+    res.status(500).json({message : err.message})
   }
 }
