@@ -6,20 +6,12 @@ const port=process.env.PORT || 5000;
 
 const dbConnect = require("./config/dbConnect");
 
+const postRouter = require("./routes/postRoute");
+
 app.use(express.json());
 app.use(express.urlencoded( { extended : true }));
 
-app.get('/', (req, res) => {
-  res.send('Hello!');
-})
-
-// app.get('/category', (req, res) => {
-//   res.send('category');
-// })
-
-// app.get('/login', (req, res) => {
-//   res.send('login')
-// })
+app.use("/", postRouter);
 
 dbConnect();
   
