@@ -1,6 +1,6 @@
 import Thumbnail from "../commonComponents/Thumbnail";
 
-const List = ({title, body}) => {
+const List = ({title, content}) => {
 
   return (
     <div className="list__container">
@@ -13,7 +13,7 @@ const List = ({title, body}) => {
       </p>
       <p>
         <span className="content__text">
-          {body}
+          {content}
         </span>
       </p>
       </li>
