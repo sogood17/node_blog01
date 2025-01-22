@@ -1,20 +1,22 @@
-
 import Thumbnail from "../commonComponents/Thumbnail";
 
-const List = () => {
+const List = ({title, body}) => {
+
   return (
     <div className="list__container">
+      <li>
       <Thumbnail />
       <p>
         <span className="title__text">
-          Title
+          {title}
         </span>
       </p>
       <p>
         <span className="content__text">
-          contents
+          {body}
         </span>
       </p>
+      </li>
     </div>
   )
 }

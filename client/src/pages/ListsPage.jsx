@@ -1,10 +1,10 @@
-import "../CSS/Lists.css";
-import List from "../components/Lists/List";
+// import "../CSS/Lists.css";
+import Lists from "../components/Lists/Lists";
 
 const ListsPage = () => {
   return (
     <div>
-      <List />
+      <Lists />
     </div>
   )
 }
