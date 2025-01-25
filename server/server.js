@@ -8,14 +8,13 @@ const dbConnect = require("./config/dbConnect");
 
 const postRouter = require("./routes/postRoute");
 
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded( { extended : true }));
 
 app.use("/", postRouter);
 
 dbConnect();
-
-app.use(cors(corsOptions));
 
 app.listen(port, () => {
   console.log("Server is running at "+ port);
