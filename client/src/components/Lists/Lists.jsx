@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "../../CSS/Lists.css"
+import "./Lists.css"
 import List from "./List.jsx";
 import {getAllPosts} from "../../api/postapis.js";
 
@@ -28,11 +28,11 @@ if (loading) {
 }
 
   return (
-    <div>
-      <ul>
+    <div className="lists__frame">
+      <ul className="lists__container">
       {posts.map((post)=>{
         return (
-        <List key={post.id} title={post.title} content={post.content} />
+        <List key={post.id} title={post.title} content={post.content} thumbnail={post.photos[0]} />
       )})}
       </ul>
     </div>
