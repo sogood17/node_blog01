@@ -1,11 +1,12 @@
+import { Link } from "react-router-dom";
 import Thumbnail from "../commonComponents/Thumbnail";
 
-const List = ({title, content}) => {
-
+const List = ({id, title, content, thumbnail}) => {
   return (
     <div className="list__container">
       <li>
-      <Thumbnail />
+      <Link to={"/"+id}>
+      <Thumbnail thumbnail={thumbnail} />
       <p>
         <span className="title__text">
           {title}
@@ -16,6 +17,7 @@ const List = ({title, content}) => {
           {content}
         </span>
       </p>
+      </Link>
       </li>
     </div>
   )

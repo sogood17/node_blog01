@@ -1,0 +1,40 @@
+.post__frame {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.post__container {
+  max-width: 1160px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 0;
+}
+
+.post__title__bold {
+  margin: 0;
+  font-weight: 800;
+}
+
+.post__title__lighter {
+  margin: 10px 0;
+  color: var(--light-font-color);
+}
+/* 
+.post__section {
+
+} */
+
+.post__article {
+  padding: 20px;
+  color: var(--basic-font-color);
+}
+
+.post__image {
+  margin: 20px 10px;
+  max-width: 1060px;
+  border-radius: 20px;
+}

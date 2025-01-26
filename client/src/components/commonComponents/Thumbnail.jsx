@@ -1,9 +1,9 @@
 import "./Thumbnail.css";
 
-const Thumbnail = () => {
+const Thumbnail = ({thumbnail}) => {
   return (
     <div className="thumbnail__container">
-      <img src="img" className="thumbnail__image" alt="img" />
+      <img src={thumbnail} className="thumbnail__image" alt="img" />
     </div>
   )
 }

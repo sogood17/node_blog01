@@ -4,6 +4,7 @@ import Footer from '../components/Footer/Footer.jsx';
 import ListsPage from '../pages/ListsPage.jsx';
 import Category from '../pages/Category.jsx';
 import Login from '../pages/Login.jsx';
+import PostDetailPage from '../pages/PostDetailPage.jsx';
 
 const RootRouter = ()=> {
   return (
@@ -11,6 +12,7 @@ const RootRouter = ()=> {
       <Header />
       <Routes>
         <Route path="/" element={<ListsPage />} />
+        <Route path="/:id" element={<PostDetailPage />} />
         <Route path="/category" element={<Category />} />
         <Route path="/login" element={<Login />} />
       </Routes>

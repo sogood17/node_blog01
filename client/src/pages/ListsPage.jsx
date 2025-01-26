@@ -1,4 +1,3 @@
-// import "../CSS/Lists.css";
 import Lists from "../components/Lists/Lists";
 
 const ListsPage = () => {
