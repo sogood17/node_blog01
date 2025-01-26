@@ -32,7 +32,7 @@ if (loading) {
       <ul className="lists__container">
       {posts.map((post)=>{
         return (
-        <List key={post.id} title={post.title} content={post.content} thumbnail={post.photos[0]} />
+        <List key={post._id} id={post._id} title={post.title} content={post.content} thumbnail={post.photos[0]} />
       )})}
       </ul>
     </div>
