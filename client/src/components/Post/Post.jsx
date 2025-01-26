@@ -1,6 +1,7 @@
-import axios from "axios";
-import {useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
+import { getPostDetail } from "../../api/postapis";
+import "./Post.css";
 
 const Post = () => {
   const {id} = useParams();  //extract id from URL
@@ -10,39 +11,42 @@ const Post = () => {
   useEffect(()=>{
     const fetchPost = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/"+id)
-        console.log(res.data);
-        setPost(res.data);
+        const postData = await getPostDetail(id);
+        console.log(postData);
+        setPost(postData);
         setLoading(false);
-        return res.data;
       } catch (err) {
         console.log(err);
       }
     }
     fetchPost();
-  }, [])
+  }, [id])
 
   if (loading) {
     return (<div>loading</div>)
   }
 
   return (
-    <div>
+    <div className="post__frame">
+    <div className="post__container">
       <p>
-        <h1>
+        <h1 className="post__title__bold">
           {post.title}
         </h1>
       </p>
       <p>
-        <h2>
+        <h2 className="post__title__lighter">
           {post.content}
         </h2>
       </p>
-      <section>
-        <article>
+      {post?.photos.length > 0 &&
+      <img className="post__image" src={post?.photos[0]} />}
+      <section className="post__section">
+        <article className="post__article__basic">
         {post.content}
         </article>
       </section>
+    </div>
     </div>
   )
 } 
