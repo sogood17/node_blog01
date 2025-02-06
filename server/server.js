@@ -14,7 +14,7 @@ app.use(express.urlencoded( { extended : true }));
 
 app.use("/", postRouter);
 
-dbConnect();
+// dbConnect();
 
 app.listen(port, () => {
   console.log("Server is running at "+ port);

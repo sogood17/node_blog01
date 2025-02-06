@@ -7,5 +7,6 @@ const Input = ({type, name, id, value, onChange, variant, placeholder}) => {
 }
 
 export const TitleInput = (props) => <Input {...props} variant="title__input--large" />
+export const ThumbnailInput = (props) => <Input {...props} variant="thumbnail__input" />
 
 export default Input;
